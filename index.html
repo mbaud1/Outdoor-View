@@ -1,215 +1,73 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>BAUDUIN PHOTOGRAPHY</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="CSS/main.css" />
-		<noscript><link rel="stylesheet" href="CSS/noscript.css" /></noscript>
-		<link rel="stylesheet" href="css/fontawesome-all.min.css">
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAUDUIN PHOTOGRAPHY</title>
+  <link rel="stylesheet" href="practice.css">
+</head>
+<body>
+<header class="header">
+  <h1>BAUDUIN PHOTOGRAPHY</h1>
+  <p>Capturing raw landscapes, intimate portraits, and the quiet stories of everyday street life. Welcome to my visual journal.</p>
+  <nav class="nav">
+    <a href="#gallery">GALLERY</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+<main class="container">
+  <section id="portfolio" class="gallery-section">
+    <h1>ARIZONA LANDSCAPE VIEW</h1>
+    <div class="gallery-grid">
+      <img class="expandable" src="arizona.jpg" alt="Arizona landscape view: Desert, arid, brushland, plains, flatland, dry valley.">
+    </div>
+  </section>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>BAUDUIN<br />
-						PHOTOGRAPHY</h1>
-						<p>Capturing raw landscapes, intimate portraits, and the quiet stories of everyday street life. Welcome to my visual journal.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+  <section id="gallery" class="gallery-section">
+    <!-- Removed onclick="this.style.display='none'" and duplicate IDs -->
+    <div class="gallery-grid">
+      <img class="expandable" src="kansas.jpg" alt="Portrait in Kansas setting: Urban, architecture, building, concrete, facade, cityscape.">
+      <img class="expandable" src="poland.jpg" alt="Portrait in Poland setting: Historical, monument, stone, classical, landmark, civic.">
+      <img class="expandable" src="train.jpg" alt="Portrait on train transit: Sidewalk, urban path, walkway, transit corridor, public space.">
+  
+      <img class="expandable" src="california.jpg" alt="Portrait in California setting: Desert landscape, arid ground, open field, desolate, horizon.">
+      
+      <img class="expandable" src="winter.jpg" alt="Winter portrait 1: Snow, cold, frost, wintertime, seasonal, outdoor.">
+      <img class="expandable" src="winter season.jpg" alt="Snowscape, winter field, snow-covered, frost, rural countryside, whiteout.">
+    </div>
+  </section>
+  <section id="about" class="about-section">
+    <h2>ABOUT</h2>
+    <p>Bauduin Photography is a visual storytelling platform that captures the essence of landscapes, portraits, and street life. Our mission is to evoke emotions and inspire through the lens of our camera.</p>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">BAUDUIN PHOTOGRAPHY</a>
-					</header>
+  
+</main>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">PORTFOLIO</a></li>
-							<li><a href="generic.html" >ABOUT THE ARTIST</a></li>
-							<li><a href="https://m-baud.com" target="_parent">MAIN PAGE</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.instagram.com/baudu_in2" target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/mbaud1" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+<!-- Dedicated Modal Overlay (Placed at the bottom of <body>) -->
+<div id="image-modal">
+  <button id="modal-close" aria-label="Close modal">&times;</button>
+  <img id="modal-img" src="" alt="Expanded View">
+  <p id="modal-caption"></p>
+</div>
 
-				<!-- Main -->
-					<div id="main">
+<section id="contact" class="contact-section">
+  <h2>CONTACT</h2>
+  <form action="#" method="POST">
+  <label for="name">NAME *</label><br>
+  <input type="text" id="name" name="name" required><br><br>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">Feb 22, 2026</span>
-									<h2><a href="#">STORIES IN THE WILD:<br />
-									EXPEDITIONS & LANDSCAPES</a></h2>
-									<p>A collection of moments captured across rolling hills, misty forests, and untouched horizons.<br />
-									<br />This gallery explores the delicate balance between light, shadow, and scale in natural environments.
-									</p>
-								</header>
-								<a href="#" class="image main"><img src="images/Minnesota.jpg" alt="Misty forest landscape" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">VIEW FULL GALLERY</a></li>
-								</ul>
-							</article>
+  <label for="email">EMAIL *</label><br>
+  <input type="email" id="email" name="email" required><br><br>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">Feb 22, 2026</span>
-										<h2><a href="#">HUMAN EXPRESSION:<br />
-										PORTRAIT SERIES</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Berlin_night.jpg" alt="Winter portrait in Poland" /></a>
-									<p>Every face carries a unique history. This series focuses on unscripted expressions, natural lighting, and authentic human connection.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Feb 22, 2026</span>
-										<h2><a href="#">URBAN IMPRESSIONS:<br />
-										LIFE ON THE MOVE</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/nature1.jpg" alt="Night landscape of Berlin streets" /></a>
-									<p>Candid snapshots of city life, architecture, and fleeting moments. Finding quiet symmetry amidst the hustle of the modern street.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">May 19, 2023</span>
-										<h2><a href="#">DETAILS IN NATURE:<br />MACRO & FLORA</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Poland Winter.jpg" alt="Close-up flora details in Arizona" /></a>
-									<p>Slowing down to observe the smaller details—textures of foliage, reflections in water drops, and the subtle shifts of seasonal colors.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">January 31, 2025</span>
-										<h2><a href="#">GERMANY NATURE</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Germany nature.jpg" alt="Germany Nature" /></a>
-									<p>A very quiet forest and beautiful place</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">May 19, 2023</span>
-										<h2><a href="#">SOMEWHERE IN ARIZONA</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Arizona1.jpg" alt="Arizona Summer" /></a>
-									<p>A warmth and a refreshing summer</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 9, 2026</span>
-										<h2><a href="#">KANSAS SUNRISE
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="Kansas Sunset.jpg" alt="Kansas Sunrise" /></a>
-									<p>Beautiful Sunrise in Kansas</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section>
+  <label for="message">MESSAGE *</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
+  <button type="submit">SEND MESSAGE</button>
+</form>
+</section>
 
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" required />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" required />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3" required></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Junction City, KS 66442</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="tel:6515153740">(651) 515-3740</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto:mlysmb@gmail.com">mlysmb@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.instagram.com/baudu_in2" target="_blank" rel="noopener noreferrer" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/mbaud1" target="_blank" rel="noopener noreferrer" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Bauduin Photography</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="js/jquery.min.js"></script>
-			<script src="js/jquery.scrollex.min.js"></script>
-			<script src="js/jquery.scrolly.min.js"></script>
-			<script src="js/browser.min.js"></script>
-			<script src="js/breakpoints.min.js"></script>
-			<script src="js/util.js"></script>
-			<script src="js/main.js"></script>
-
-	</body>
+<script src="practice.js"></script>
+</body>
 </html>
