@@ -1,0 +1,228 @@
+/* ==========================================================================
+   1. Global Reset & Base Styles
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #2b2b2b;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   2. Header & Navigation
+   ========================================================================== */
+.header {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 4px solid #38bdf8;
+}
+
+.header h1 {
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.nav {
+  margin-top: 20px;
+}
+
+.nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0 15px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #38bdf8;
+}
+
+/* ==========================================================================
+   3. Sections & Headings
+   ========================================================================== */
+.gallery-section, 
+.contact-section {
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid #38bdf8;
+}
+
+.gallery-section {
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-section h2, 
+.contact-section h2 {
+  position: relative;
+  display: inline-block;
+  color: #0f172a;
+  letter-spacing: 1px;
+}
+
+.gallery-section h2::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: #38bdf8;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   4. Gallery Grid
+   ========================================================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  filter: brightness(0.95);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-grid img:hover {
+  filter: brightness(1.05);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Expandable Image Utility */
+img.expandable {
+  cursor: zoom-in;
+}
+
+img.expandable:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   5. Modal Styles
+   ========================================================================== */
+#image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-img {
+  max-width: 80vw;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#modal-caption {
+  color: #ffffff;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  max-width: 80%;
+}
+
+#modal-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10000;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#modal-close:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   6. Contact Form Section
+   ========================================================================== */
+/* Example CSS Fixes */
+.contact-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+}
+.about-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.about-section p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #000;
+  letter-spacing: 0.02em;
+}
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-section button {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
