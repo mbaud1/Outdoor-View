@@ -54,6 +54,22 @@ body {
   background: rgba(255, 255, 255, 0.15);
   color: #38bdf8;
 }
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #1e293b;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #334155;
+}
 
 /* ==========================================================================
    3. Sections & Headings
